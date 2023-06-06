@@ -1,11 +1,14 @@
 def check_even(number):
+    """Check if number is even"""
     if number % 2 == 0:
-          return True  
-
+        return True
     return False
 
 
 def ft_filter(func, iter):
+    """Copy of filter function"""
+    if func is None:
+        return [item for item in iter if item]
     return [item for item in iter if func(item)]
 
 
@@ -21,7 +24,8 @@ def main():
         print(f'filter list {filter_numbers}')
         print(f'filter list {ft_filter_numbers}')
     except TypeError as e:
-         print(f"TypeError: {str(e)}")
+        print(f"TypeError: {str(e)}")
+
 
 if __name__ == "__main__":
     main()

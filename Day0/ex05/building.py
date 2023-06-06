@@ -60,7 +60,7 @@ def main():
         text = get_string()
         counts = print_number_of_char(text)
         nice_print(counts)
-    except  KeyboardInterrupt:
+    except KeyboardInterrupt:
         print("\nKeyboardInterrupt detected. Program ended.")
         return 1
     except AssertionError as e:

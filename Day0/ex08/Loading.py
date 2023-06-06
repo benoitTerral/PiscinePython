@@ -1,6 +1,8 @@
-import time    
+import time
+
 
 def ft_tqdm(lst: range) -> None:
+    """Reproduce tqdm loading bar"""
     size = len(lst)
     start_time = time.time()
     progress = 0
@@ -14,5 +16,6 @@ def ft_tqdm(lst: range) -> None:
         filled_length = int(bar_length * (percentage / 100))
         bar = '#' * filled_length + ' ' * (bar_length - filled_length)
         it_per_second = progress / elapsed_time
-        print(f"{percentage:.0f}% |{bar} |{progress}/{size}, [{elapsed_time:.2f}s, {it_per_second:.2f}it/s]", end="\r")
+        print(f"{percentage:.0f}% |{bar}|{progress}/{size}, \
+              [{elapsed_time:.2f}s, {it_per_second:.2f}it/s]", end="\r")
     print()
