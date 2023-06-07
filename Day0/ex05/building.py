@@ -19,8 +19,7 @@ def get_string():
 
 
 def print_number_of_char(text):
-    """Compute nb of words,upper-case, lower-case, punctuation
-    """
+    """Compute nb of words,upper-case, lower-case, punctuation"""
     counts = {
         'total': 0,
         'upper_case': 0,
