@@ -24,8 +24,11 @@ def main():
         plt.xlabel('Year')
         plt.xticks(np.arange(int(min(pop_fr_bel.columns)),
                              int(max(pop_fr_bel.columns)), 40))
-        yticks = np.arange(20, max(pop_fr_bel.values.ravel()), 20)
+        print(np.arange(int(min(pop_fr_bel.columns)),
+                        int(max(pop_fr_bel.columns)), 40))
+        yticks = np.arange(20, max(pop_fr_bel.values.ravel()), 20).astype(int)
         yticks_label = [str(x) + 'M' for x in yticks]
+        print(yticks_label)
         plt.yticks(yticks, yticks_label)
         plt.ylabel('Population')
         plt.legend(loc='lower right')
