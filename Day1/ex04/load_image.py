@@ -4,6 +4,7 @@ import os.path
 
 
 def ft_load(path: str) -> np.ndarray:
+    """"Load an image as a RGB array"""
     assert os.path.isfile(path), "File does not exist"
     img = cv.imread(path)
     gray_image = cv.cvtColor(img, cv.COLOR_BGR2GRAY)

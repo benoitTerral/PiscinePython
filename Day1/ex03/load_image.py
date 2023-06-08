@@ -1,13 +1,13 @@
-import cv2 as cv
 import numpy as np
 import os.path
+from PIL import Image
 
 
-def ft_load(path: str) -> np.ndarray:   
+def ft_load(path: str) -> np.ndarray:
+    """"Load an image as a RGB array"""
     assert os.path.isfile(path), "File does not exist"
-    img = cv.imread(path)
+    img = Image.open(path)
     assert img is not None, "File cannot be read"
-    gray_image = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
-    print("The shape of image is: " + str(gray_image.shape))
-    print(gray_image)
-    return (gray_image)
+    img_array = np.asarray(img)
+    print("The shape of image is: " + str(img_array.shape))
+    return (img_array)
