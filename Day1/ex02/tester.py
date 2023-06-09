@@ -6,7 +6,7 @@ import PIL
 def main():
     try:
         os.chdir(os.path.dirname(__file__))
-        print(ft_load("tester.py"))
+        print(ft_load("landscape.jpg"))
         return 0
     except PIL.UnidentifiedImageError as e:
         print(f"UnidentifiedImageError: {str(e)}")

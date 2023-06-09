@@ -17,9 +17,9 @@ def main():
         os.chdir(os.path.dirname(__file__))
         img = ft_load('animal.jpeg')
         part_of_img = img[100:500, 450:850]
-        part_of_img = rotate(part_of_img)
-        print("New shape after Transpose: " + str(part_of_img.shape))
+        print("The shape of image is: " + str(part_of_img.shape))
         print(part_of_img)
+        part_of_img = rotate(part_of_img)
         plt.imshow(part_of_img, cmap='gray')
         plt.show()
         return 0

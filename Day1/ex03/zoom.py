@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib
 import os
 import numpy as np
+from PIL import Image
 import PIL
 
 
@@ -13,7 +14,7 @@ def main():
         img = ft_load('animal.jpeg')
         print(img)
         part_of_img = img[100:500, 450:850]
-        part_of_img = np.asarray(PIL.fromarray(part_of_img).convert('L'))
+        part_of_img = np.asarray(Image.fromarray(part_of_img).convert('L'))
         print("New shape after slicing: " + str(part_of_img.shape))
         print(part_of_img.reshape(1, np.prod(part_of_img.shape), 1))
         plt.imshow(part_of_img, cmap='gray')

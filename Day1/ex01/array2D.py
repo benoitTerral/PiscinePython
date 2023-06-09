@@ -7,8 +7,8 @@ def slice_me(family: list, start: int, end: int) -> list:
     assert all(isinstance(family[0], list) and
                len(sublist) == len(family[0])
                for sublist in family), "list of lists is expected as input"
-    assert all(isinstance(start, int) and isinstance(end, int)), \
-        "Linit must be int"
+    assert isinstance(start, int) and isinstance(end, int), \
+        "Limit must be int"
     array = np.asarray(family)
     print("My shape is : " + str(array.shape))
     array = array[start:end]

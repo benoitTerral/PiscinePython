@@ -8,6 +8,7 @@ matplotlib.use("WebAgg")
 
 os.chdir(os.path.dirname(__file__))
 array = ft_load("landscape.jpg")
+print(array)
 array_inverted = ft_invert(array)
 array_red = ft_red(array)
 array_green = ft_green(array)
