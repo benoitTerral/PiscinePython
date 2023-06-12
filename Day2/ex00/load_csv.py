@@ -5,7 +5,7 @@ import os
 def load(path: str) -> pd.DataFrame:
     """Load and return a pandas dataframe
     In case:
-    - the file does not exist
+    - the file does not existfds
     -the path provided is a directory
     returns None"""
     if os.path.exists(path) is False or os.path.isdir(path) is True:
