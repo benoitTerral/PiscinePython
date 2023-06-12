@@ -28,7 +28,7 @@ class Lannister(Character):
 
     @classmethod
     def create_lannister(cls, name, isAlive):  # should i return the names
-        """Create Lanniser class method""""
+        """Create Lanniser class method"""
         assert isinstance(name, str) and isinstance(isAlive, bool), \
             "One string and one bool expected"
         return cls(name, isAlive)

@@ -12,7 +12,11 @@ class Baratheon(Character):
         self.hairs = "dark"
 
     def __str__(self) -> str:
+        """"str of Baratheon"""
         return f"Vector: ({self.family_name}, {self.eyes}, {self.hairs})"
+
+    def __repr__(self) -> str:
+        return self.__str__()
 
 
 class Lannister(Character):
@@ -24,11 +28,15 @@ class Lannister(Character):
         self.hairs = "light"
 
     def __str__(self) -> str:
+        """"str of Lannister"""
         return f"Vector: ({self.family_name}, {self.eyes}, {self.hairs})"
+
+    def __repr__(self) -> str:
+        return self.__str__()
 
     @classmethod
     def create_lannister(cls, name, isAlive):  # should i return the names
-        """Create Lanniser class method""""
+        """Create Lanniser class method"""
         assert isinstance(name, str) and isinstance(isAlive, bool), \
             "One string and one bool expected"
         return cls(name, isAlive)

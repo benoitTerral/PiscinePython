@@ -14,10 +14,12 @@ class Character(ABC):
         self.is_alive = False
 
     def __str__(self) -> str:
+        """str of Character"""
         sb = (str(value) for value in self.__dict__.values())
         return f"Vector{{{', '.join(sb)}}}"
 
     def __repr__(self) -> str:
+        """repr of Character"""
         return self.__str__()
 
 
